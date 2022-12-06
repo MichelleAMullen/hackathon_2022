@@ -43,8 +43,23 @@
     defaults_version: 1
     hidden_fields: []
     y_axes: []
-    listen: {}
+    listen:
+      Popular Names US State: male_names.us_state
     row: 0
     col: 0
     width: 24
     height: 12
+  filters:
+  - name: Popular Names US State
+    title: Popular Names US State
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: benevitypoc
+    explore: usa_1910_2013
+    listens_to_filters: []
+    field: male_names.us_state
