@@ -5,8 +5,8 @@
   description: ''
   preferred_slug: zdJHVoMRSDyoHzgaFyF28M
   elements:
-  - title: Popular Names
-    name: Popular Names
+  - title: Popular Names test restore
+    name: Popular Names test restore
     model: benevitypoc
     explore: usa_1910_2013
     type: looker_column
@@ -43,8 +43,24 @@
     defaults_version: 1
     hidden_fields: []
     y_axes: []
-    listen: {}
+    listen:
+      Total Names: male_names.total_names
     row: 0
     col: 0
     width: 24
     height: 12
+  filters:
+  - name: Total Names
+    title: Total Names
+    type: field_filter
+    default_value: "[0,100]"
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: range_slider
+      display: inline
+      options: []
+    model: benevitypoc
+    explore: usa_1910_2013
+    listens_to_filters: []
+    field: male_names.total_names
