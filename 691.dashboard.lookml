@@ -14,8 +14,24 @@
       cloud_pricing_export.count]
     sorts: [cloud_pricing_export.pricing_as_of_time desc]
     limit: 500
-    listen: {}
+    listen:
+      Pricing As of Date: cloud_pricing_export.pricing_as_of_date
     row: 0
     col: 0
     width: 22
     height: 7
+  filters:
+  - name: Pricing As of Date
+    title: Pricing As of Date
+    type: field_filter
+    default_value: 7 day
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: relative_timeframes
+      display: inline
+      options: []
+    model: jim_test_project
+    explore: cloud_pricing_export
+    listens_to_filters: []
+    field: cloud_pricing_export.pricing_as_of_date
