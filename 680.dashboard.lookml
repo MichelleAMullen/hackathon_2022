@@ -5,8 +5,8 @@
   description: ''
   preferred_slug: zdJHVoMRSDyoHzgaFyF28M
   elements:
-  - title: Popular Names
-    name: Popular Names
+  - title: Popular Names demo change
+    name: Popular Names demo change
     model: benevitypoc
     explore: usa_1910_2013
     type: looker_column
